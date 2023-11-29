@@ -1,38 +1,179 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.reg-form {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.reg-form form {
+  margin: 0 auto;
+  padding: .5rem;
+  display: block;
+  width: 20%;
+  border: 1px solid gray;
+}
+
+.reg-form form div {
+  display: block;
+}
+
+.reg-form form div h2,
+h3 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.reg-form form input,
+button {
+  border: 1px solid gray;
+  border-radius: 0;
+  font-size: 1.25rem;
+  outline: none;
+  margin: .5rem 0;
+  padding: .25rem;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.reg-form form .log-reg-btn {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.reg-form form button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.reg-from from .log-reg-btn {
+  text-align: center;
+}
+
+/* Voting Page */
+.evm {
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.evm form {
+  margin: 0 auto;
+  padding: .5rem;
+  display: block;
+  width: 20%;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.evm form div {
+  display: block;
+  width: 100%;
+  margin: .5rem auto;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.evm form div h2 {
+  padding: 1rem 0;
+}
+
+.evm form div input[type=radio] {
+  border: 1px;
+  width: 10%;
+  height: 1.25rem;
+}
+
+.evm form div input,
+label {
+  display: inline-block;
+}
+
+.evm form div label {
+  width: 85%;
+  display: inline-block;
+  border: 1px solid gray;
+  padding: .5rem 1rem;
+}
+
+.evm .log-reg-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.evm form button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 0;
+  font-size: 1.25rem;
+  outline: none;
+  padding: .5rem 0;
+  margin: .5rem;
+  width: 50%;
+}
+
+.evm form .vote-btn {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
+  /**/
+  .evm form .voted {
+    display: flex;
+    justify-content: center;
+  align-items: center;
+    height: 250px;
+      border: 1px solid gray;
+    }
+    
+    .evm form .voted h4 {
+      font-size: 1.25rem;
+      color: green;
+    }
+    
+    /* Admin Home Result Page */
+    .voting-result {
+      margin: 1rem auto;
+      width: 100%;
+    }
+        .voting-result section {
+          margin: 0 auto;
+          padding: .5rem;
+          display: block;
+          width: 20%;
+          background-color: white;
+          border: 1px solid gray;
+        }
+        .voting-result section div {
+          display: block;
+          width: 100%;
+          margin: .5rem auto;
+          text-align: center;
+          font-size: 1.25rem;
+        }
+    
+        .voting-result section div h2 {
+          margin: 1rem 0;
+        }
+    
+        .voting-result section div h4 {
+          display: block;
+          padding: .5rem;
+          border: 1px solid gray;
+        }
+.voting-result section div h4 span {
+  display: inline-block;
+  border: 1px solid gray;
+  margin: 0 0 0 .5rem;
+  padding: .5rem;
+}
+/*Top Navbar*/
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid gray;
 }
