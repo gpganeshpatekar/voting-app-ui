@@ -58,7 +58,7 @@ const LoginForm = () => {
     }
 
     const redirectToRegisterUser = () => {
-        navigate('/');
+        navigate('/register');
     }
     return (
         <div className='reg-form'>
@@ -77,7 +77,7 @@ const LoginForm = () => {
                     <button onClick={redirectToRegisterUser}>REGISTER</button>
                 </div>
                 <div>
-                    <h3>{logInError}</h3>
+                    <h3 className='loginError'>{logInError}</h3>
                 </div>
             </form>
         </div>

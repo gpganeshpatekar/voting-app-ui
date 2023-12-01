@@ -1,15 +1,28 @@
 import React, { useEffect, useState } from 'react'
 import { PUBLIC_AXIOS } from '../services/axios-config';
+import VotedUsers from './VotedUsers';
 
 const VotingResult = () => {
 
+
     const [elections, setElections] = useState([]);
+    const [selectedCandidate, setSelectedCandidate] = useState(null);
+
+    const handleCandidateClick = (candidateId) => {
+
+        if (selectedCandidate === candidateId) {
+            setSelectedCandidate(null);
+        } else {
+            setSelectedCandidate(candidateId)
+        }
+
+    }
+
 
     useEffect(() => {
         fetchAllElections();
     }, [])
 
-    console.log(elections);
 
     const fetchAllElections = async () => {
 
@@ -22,6 +35,7 @@ const VotingResult = () => {
 
     }
 
+
     return (
         <div className='voting-result'>
             <section>
@@ -29,13 +43,17 @@ const VotingResult = () => {
                     <h2>VOTING RESULT</h2>
                 </div>
                 {
-                    elections[0]?.candidates.map((e, index) => {
-                        return <>
-                            <div key={index}>
-                                <h4>{e.name}<span className='votes'>{e.votes}</span></h4>
+                    elections[0]?.candidates.map((candidate) => (
+
+                        <div key={candidate.id}>
+                            <h4>{candidate.name}<span className='votes' onClick={() => handleCandidateClick(candidate.id)}>{candidate.votes}</span></h4>
+                            {
+                                selectedCandidate === candidate.id && <VotedUsers candidate={candidate} />
+                            }
                             </div>
-                        </>
-                    })
+
+                    ))
+
                 }
             </section>
         </div>

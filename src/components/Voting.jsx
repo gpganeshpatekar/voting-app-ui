@@ -57,9 +57,7 @@ const Voting = () => {
 
     }
 
-    console.log(elections);
     const isVoted = elections.some(election => election.voters.some(v => v.id === user.data?.id));
-    console.log("is voted : ", isVoted);
 
 
     return (
@@ -72,31 +70,30 @@ const Voting = () => {
                                 <h2>VOTE HERE</h2>
                             </div>
                             {
-                                elections[0]?.candidates.map((e) => {
-                                    return <>
-                                        <div key={e.id}>
-                                            <input type='radio' name='candidateId' value={e.id}
+                                elections[0]?.candidates.map((candidate) => (
+                                    <>
+                                        <div key={candidate.id}>
+                                            <input type='radio' name='candidateId' value={candidate.id}
                                                 onChange={() => {
                                                     setVote(prevVote => ({
                                                         ...prevVote,
-                                                        candidateId: e.id,
+                                                        candidateId: candidate.id,
                                                     }))
                                                 }}
-                                            />&nbsp;<label htmlFor='candidate'>{e.name}</label>
+                                            />&nbsp;<label htmlFor='candidate'>{candidate.name}</label>
                                         </div>
                                     </>
-                                })
+                                ))
                             }
                             <div className='vote-btn'>
                                 <button type='submit' disabled={voted === true}>Vote</button>
 
                             </div>
-                            <div>
+
                                 {
-                                    (voted === true) ?
-                                        <h4>{successMessage}</h4> : ''
+                                (voted === true) ? <div><h3 className='success'>{successMessage}</h3></div> : ''
                                 }
-                            </div>
+
                         </> :
                         <>
                             <div className='voted'>

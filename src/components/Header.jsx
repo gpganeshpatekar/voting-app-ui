@@ -5,11 +5,11 @@ const Header = () => {
     return (
         <header>
             <div className='top-navbar'>
-                <h2>Voting App</h2>
+                <h2>VOTING APPLICATION</h2>
                 <TopNavbar />
             </div>
         </header>
     )
 }
 
-export default Header
+export default Header;

@@ -22,11 +22,25 @@
   display: block;
 }
 
+.reg-form form span {
+  display: block;
+  padding: 0 .25rem;
+  color: red;
+  font-size: .875rem;
+}
 .reg-form form div h2,
 h3 {
   text-align: center;
 }
+.reg-form form div .loginError {
+  background-color: rgb(243, 169, 169);
+  color: red;
+}
 
+.reg-form form div .success {
+  background-color: lightgreen;
+  color: green;
+}
 .reg-form form input,
 button {
   border: 1px solid gray;
@@ -34,7 +48,7 @@ button {
   font-size: 1.25rem;
   outline: none;
   margin: .5rem 0;
-  padding: .25rem;
+    padding: .25rem;
   width: 100%;
 }
 
@@ -80,6 +94,7 @@ button {
   padding: 1rem 0;
 }
 
+
 .evm form div input[type=radio] {
   border: 1px;
   width: 10%;
@@ -119,7 +134,11 @@ label {
   display: flex;
   justify-content: center;
   }
-  
+
+        .evm form div .success {
+          background-color: lightgreen;
+          color: green;
+        }
   /**/
   .evm form .voted {
     display: flex;
@@ -169,6 +188,22 @@ label {
   border: 1px solid gray;
   margin: 0 0 0 .5rem;
   padding: .5rem;
+  cursor: pointer;
+  }
+  
+  .voting-result section div .votedUsers {
+    text-transform: uppercase;
+  }
+  
+  .voting-result section div .votedUsers h5 {
+    display: block;
+    background-color: lightgray;
+  }
+  
+  .voting-result section div .votedUsers span {
+    display: block;
+    font-size: .875rem;
+    border-bottom: 1px solid lightgray;
 }
 /*Top Navbar*/
 .top-navbar {
@@ -176,4 +211,31 @@ label {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid gray;
+  padding: 0 .5rem;
+  }
+  
+  .top-navbar nav ul {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .top-navbar nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: .5rem;
+    color: darkgray;
+    text-transform: uppercase;
+  }
+  
+  .top-navbar nav ul li a:hover {
+    color: black;
+  }
+  
+  .top-navbar nav ul li a.active {
+    color: black;
+  }
+  
+  .notFound {
+    margin: 1rem auto;
+    text-align: center;
 }

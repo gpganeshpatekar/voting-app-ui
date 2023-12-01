@@ -34,7 +34,7 @@ const TopNavbar = () => {
             console.log("Logout successfully..");
         })
         setTimeout(() => {
-            navigate('/login');
+            navigate('/');
         }, 1000)
     }
 
@@ -62,10 +62,10 @@ const TopNavbar = () => {
                         :
                         <>
                             <li>
-                                <NavLink to={'/login'}>Login</NavLink>
+                                <NavLink to={'/'}>Login</NavLink>
                             </li>
                             <li>
-                                <NavLink to={'/'}>Register</NavLink>
+                                <NavLink to={'/register'}>Register</NavLink>
                             </li>
                         </>
 
